@@ -9,5 +9,5 @@ RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
     install-php-extensions gd
 
 RUN apt update && \
-    apt install -y wget && \
+    apt install -y unzip wget && \
     wget -qO- https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
