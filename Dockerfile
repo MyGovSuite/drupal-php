@@ -1,4 +1,4 @@
-ARG PHP_TAG=7.4-fpm
+ARG PHP_TAG
 
 FROM php:$PHP_TAG
 
