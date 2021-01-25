@@ -8,6 +8,6 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
     install-php-extensions gd
 
-RUN apt update && \
-    apt install -y unzip wget && \
+RUN apt-get update && \
+    apt-get install -y unzip wget && \
     wget -qO- https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
