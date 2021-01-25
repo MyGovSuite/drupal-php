@@ -7,3 +7,7 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 # PHP extension requirements https://git.drupalcode.org/project/drupal/-/blob/8.9.x/core/composer.json
 RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
     install-php-extensions gd
+
+RUN apt update && \
+    apt install -y wget && \
+    wget -qO- https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
